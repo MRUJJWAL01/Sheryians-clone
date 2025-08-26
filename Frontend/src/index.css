@@ -1,1 +1,51 @@
 @import 'tailwindcss';
+@font-face {
+  font-family: 'Neue Machina';
+  src: url('./assets//font/NeueMachina-Light_gwWCZxVuQl.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Helvetica Now Display';
+  src: url('./assets/font/HelveticaNowDisplay-Regular_5Mzhp8KlA8_CAVTbnsPOM.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Neue Machina', sans-serif;
+}
+
+body {
+  margin: 0;
+  height: 100vh;
+  background: #000; /* Base background */
+  overflow: hidden;
+  position: relative;
+}
+
+/* Add glowing spots */
+body::before,
+body::after {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(0, 255, 200, 0.3) 0%, transparent 70%);
+  filter: blur(120px);
+  z-index: 0;
+}
+
+/* Top glow */
+body::before {
+  top: -150px;
+  
+  left: 30%;
+}
+
+/* Bottom glow */
+body::after {
+  bottom: -150px;
+  right: 30%;
+}
+

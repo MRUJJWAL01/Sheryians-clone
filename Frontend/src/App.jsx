@@ -1,8 +1,13 @@
 import React from 'react'
+import Routing from './routing/Routing'
+import Home from './Pages/Home'
 
 const App = () => {
   return (
-    <div>App</div>
+    <div className='h-screen w-full '>
+      <Home />
+      <Routing />
+    </div>
   )
 }
 
